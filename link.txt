@@ -1,0 +1,38 @@
+85569773e1be92dc868c18ff8a64ad57
+
+const fetch = require('node-fetch');
+
+const url = 'https://api.themoviedb.org/3/search/movie?query=gujju&include_adult=false&language=en-US&page=1';
+const options = {
+  method: 'GET',
+  headers: {
+    accept: 'application/json',
+    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI4NTU2OTc3M2UxYmU5MmRjODY4YzE4ZmY4YTY0YWQ1NyIsInN1YiI6IjY1NGQxNzkxNWE1ZWQwMDEzYmFiYzVkZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.3NbxwGn9nnFaAgw7huF_VHR7flWh5sfuwme1UUeYdZE'
+  }
+};
+
+fetch(url, options)
+  .then(res => res.json())
+  .then(json => console.log(json))
+  .catch(err => console.error('error:' + err));
+
+  API Key: 85569773e1be92dc868c18ff8a64ad57
+Base URL: https://api.themoviedb.org/3
+
+Individual:
+https://api.themoviedb.org/3/movie/{movie_id}?api_key=85569773e1be92dc868c18ff8a64ad57
+
+Now Playing:
+https://api.themoviedb.org/3/movie/now_playing?api_key=85569773e1be92dc868c18ff8a64ad57
+
+Popular:
+https://api.themoviedb.org/3/movie/popular?api_key=85569773e1be92dc868c18ff8a64ad57
+
+Top Rated:
+https://api.themoviedb.org/3/movie/top_rated?api_key=85569773e1be92dc868c18ff8a64ad57
+
+Upcoming: 
+https://api.themoviedb.org/3/movie/upcoming?api_key=85569773e1be92dc868c18ff8a64ad57
+
+Search:
+https://api.themoviedb.org/3/search/movie?api_key=85569773e1be92dc868c18ff8a64ad57&query={movie_name}
